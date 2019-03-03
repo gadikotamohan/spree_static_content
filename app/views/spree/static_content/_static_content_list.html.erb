@@ -1,6 +1,6 @@
 <% if page.foreign_link.present? %>
   <li class="nav-item">
-    <%= link_to page.title, page.foreign_link, target: '_blank', rel: 'nofollow' %>
+    <%= link_to page.title, page.foreign_link, class: 'nav-link', target: '_blank', rel: 'nofollow' %>
   </li>
 <% else %>
   <% page_uri = Rails.application.routes.named_routes[:spree].path.spec.to_s == '/' ? page.slug : Rails.application.routes.named_routes[:spree].path.spec.to_s + page.slug %>
